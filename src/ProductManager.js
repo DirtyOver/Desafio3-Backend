@@ -29,7 +29,7 @@ class ProductManager {
 
   getProductById(id) {
     const products = this.getProducts();
-    const product = products.find((p) => p.id === id);
+    const product = products.find((p) => p.id === parseInt(id));
     if (!product) {
       throw new Error('Producto no encontrado');
     }
